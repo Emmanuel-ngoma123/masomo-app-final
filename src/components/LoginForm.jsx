@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { LogIn, Shield, Users, User, GraduationCap } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const LoginForm = ({ onLogin }) => {
   const [role, setRole] = useState('student');
@@ -27,6 +28,7 @@ const LoginForm = ({ onLogin }) => {
       style={{ maxWidth: '450px', width: '100%', margin: '0 auto', position: 'relative', zIndex: 10 }}
     >
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <img src={logo} alt="MasomoApp Logo" style={{ maxWidth: '180px', height: 'auto', marginBottom: '1.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }} />
         <h2 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Connexion</h2>
         <p style={{ color: 'var(--text-muted)' }}>Bienvenue sur Masomo App</p>
       </div>

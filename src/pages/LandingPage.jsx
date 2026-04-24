@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, ShieldCheck, Zap, Globe, MessageCircle, Star, Award, Building2 } from 'lucide-react';
+import { ShieldCheck, Zap, Globe, MessageCircle, Star, Award, Building2 } from 'lucide-react';
 import LoginForm from '../components/LoginForm';
 import ThemeToggle from '../components/ThemeToggle';
+import logo from '../assets/logo.png';
 
 const LandingPage = ({ onLogin }) => {
   return (
@@ -15,17 +16,14 @@ const LandingPage = ({ onLogin }) => {
       <section style={{ padding: 'var(--spacing-xl) var(--spacing-md)', minHeight: '90vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <header style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)' }}>
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1.5rem' }}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2rem', marginBottom: '2rem' }}
           >
-            <div className="glass-effect" style={{ padding: '0.8rem', borderRadius: 'var(--radius-md)', background: 'var(--primary)' }}>
-              <GraduationCap size={40} color="white" />
-            </div>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', margin: 0 }}>Masomo App</h1>
+            <img src={logo} alt="MasomoApp Logo" style={{ maxWidth: '350px', width: '90%', height: 'auto', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))' }} />
           </motion.div>
-          <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--text-muted)', fontSize: '1.25rem' }}>
+          <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--text-muted)', fontSize: '1.25rem', lineHeight: '1.6' }}>
             La solution de gestion scolaire qui traverse le temps. Automatisez, centralisez et révolutionnez l'expérience éducative de votre établissement.
           </p>
         </header>

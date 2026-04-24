@@ -14,6 +14,8 @@ import {
   BookOpen
 } from 'lucide-react';
 
+import logo from '../assets/logo.png';
+
 const Sidebar = ({ role, user, activeTab, setActiveTab, onLogout }) => {
   const menuItems = {
     admin: [
@@ -43,12 +45,9 @@ const Sidebar = ({ role, user, activeTab, setActiveTab, onLogout }) => {
   const currentMenu = menuItems[role] || [];
 
   return (
-    <div className="glass-effect" style={{ width: '280px', height: '95vh', margin: '2.5vh 0 2.5vh 1.5rem', borderRadius: 'var(--radius-lg)', display: 'flex', flexDirection: 'column', padding: '2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
-        <div style={{ background: 'var(--primary)', padding: '0.5rem', borderRadius: 'var(--radius-sm)' }}>
-          < GraduationCap color="white" size={24} />
-        </div>
-        <h2 style={{ fontSize: '1.25rem' }}>Masomo App</h2>
+    <div className="glass-effect" style={{ width: '280px', height: '95vh', margin: '2.5vh 0 2.5vh 1.5rem', borderRadius: 'var(--radius-lg)', display: 'flex', flexDirection: 'column', padding: '1.5rem 2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '3rem' }}>
+        <img src={logo} alt="MasomoApp Logo" style={{ maxWidth: '100%', height: 'auto', maxHeight: '50px', objectFit: 'contain' }} />
       </div>
 
       <nav style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
